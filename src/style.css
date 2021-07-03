@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+body {
+    background: repeating-linear-gradient(
+            to right,
+            #f6ba52,
+            #f6ba52 10vw,
+            #ffd180 10vw,
+            #ffd180 20vw
+    );
+    font-family: 'Gloria Hallelujah', Arial;
+    margin: 2rem;
+}
+
+button {
+    background: rosybrown;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    width: 25vw;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    font-family: 'Gloria Hallelujah', Arial;
+}
+
+.content {
+    display: grid;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.kbLogo {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+
+@media screen and (min-width: 480px) {
+    .kbLogo {
+        width: 60vh;
+    }
+}
