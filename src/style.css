@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 body {
     background: repeating-linear-gradient(
             to right,
@@ -11,6 +11,7 @@ body {
     font-family: 'Gloria Hallelujah', Arial;
     margin: 2rem;
     font-size: 16px;
+    color: black;
 }
 
 button {
@@ -35,6 +36,24 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', Arial;
+    color: red;
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: 'Luckiest Guy', Arial;
+    color: rgb(19, 124, 98);
+    -webkit-text-fill-color: rgb(19, 124, 98);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-size: 2rem;
 }
 
 .container {
@@ -70,17 +89,24 @@ button:hover {
     position: relative;
     bottom: 1.1rem;
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 90vw;
-    height: 50vh;
     background-color: white;
-    color: red;
     border: solid black 3px;
     margin-top: 0;
     padding: 0 1.5rem;
     border-radius: 6%;
     text-align: center;
+}
+
+.itemCard {
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+.itemImage {
+    width: 20vw;
+    min-width: 300px;
 }
 
 @media screen and (min-width: 500px) {
