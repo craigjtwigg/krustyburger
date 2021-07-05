@@ -101,10 +101,6 @@ h2 {
     text-align: center;
 }
 
-.welcomeDiv {
-    margin-bottom: 2rem;
-}
-
 .itemCard {
     padding: 1rem;
     margin: 0 0 1rem 0;
@@ -134,13 +130,16 @@ h2 {
 }
 
 .joint {
-    width: 280px;
+    width: 200px;
+    height: 200px;
     border: solid black 3px;
     border-radius: 50%;
     margin: 2rem;
 }
 
-
+.welcomeDiv {
+    text-align: center;
+}
 
 .welcome {
     clear: left;
