@@ -12,6 +12,7 @@ body {
     margin: 2rem;
     font-size: 16px;
     color: black;
+    box-sizing: border-box;
 }
 
 button {
@@ -45,6 +46,7 @@ h1 {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     font-size: 4rem;
+    margin-bottom: 5px;
 }
 
 h2 {
@@ -95,7 +97,7 @@ h2 {
     border: solid black 3px;
     margin-top: 0;
     padding: 0 1.5rem;
-    border-radius: 6%;
+    border-radius: 5.5%;
     text-align: center;
 }
 
@@ -105,8 +107,42 @@ h2 {
 }
 
 .itemImage {
-    width: 20vw;
+    width: 60vw;
     min-width: 300px;
+    margin-bottom: 1rem;
+    border: solid black 3px;
+    border-radius: 10%;
+}
+
+.homeDiv {
+    width: 100%;
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+.seal {
+        width: 200px;
+        height: 200px;
+        margin: 1rem;
+}
+
+.guarantee {
+    text-align: center;
+}
+
+.joint {
+    width: 80%;
+    border: solid black 3px;
+    border-radius: 50%;
+    margin: 2rem;
+}
+
+.welcomeDiv {
+    display: flex;
+    align-items: center;
+}
+
+.welcome {
+    font-size: 1rem;
 }
 
 @media screen and (min-width: 500px) {
@@ -123,6 +159,33 @@ h2 {
         font-size: 1.6rem;
         padding: 0.2rem;
     }
+
+    .seal {
+        float: left;
+        shape-outside: circle(50%);
+        width: 200px;
+        height: 200px;
+        margin: 1rem;
+}
+
+.joint {
+    width: 280px;
+    height: 280px;
+    float: right;
+    shape-outside: circle(50%);
+    margin: 2rem;
+}
+
+.welcome {
+    font-size: 2rem;
+    text-align: right;
+}
+
+
+    .guarantee {
+        text-align: left;
+    }
+
 }
 
 @media screen and (min-width: 1000px) {
@@ -131,7 +194,31 @@ h2 {
         width: 70vw;
     }
 
+    .menuContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
     .nav {
         width: 70vw;
+    }
+
+    .itemImage {
+        width: 25vw;
+    }
+
+    .seal {
+        width: 280px;
+        height: 280px;
+        float: left;
+        shape-outside: circle(50%);
+    }
+
+  
+
+    .guarantee {
+        font-size: 2.2rem;
+        text-align: left;
     }
 }

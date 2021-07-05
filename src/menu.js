@@ -2,14 +2,17 @@ import CloggerImage from './theClogger.jpeg'
 import KBImage from './krustyBurger.jpeg'
 import FootlongImage from './sideshow.jpeg'
 import MNImage from './motherNature.jpeg'
+import Duff from './duff.jpeg'
+import Soda from './soda.jpeg'
 
-const burgerFactory = (name, price, meal, theid, image) => {
+const burgerFactory = (name, price, meal, theid, image, type) => {
     return {
         name: name,
         price: price,
         meal: meal,
         theid: theid,
-        image: image
+        image: image,
+        type: type
     }
 }
 
@@ -26,8 +29,9 @@ const menuContent = (() => {
     let clogger = burgerFactory("The Clogger Burger", "$3", "$5", "theClogger", CloggerImage)
     let ribwich = burgerFactory("Ribwich", "$3", "$5", "ribwich") 
     let motherNature = burgerFactory("Mother Nature Burger", "$3", "$5", "motherNature", MNImage)
-    let sideShow = burgerFactory("Side Show Bob Foot-Long", "£3", "$5", "sideshow", FootlongImage)
-
+    let sideShow = burgerFactory("Side Show Bob Foot-Long", "$3", "$5", "sideshow", FootlongImage)
+    let duff = burgerFactory("Duff", "$3", "$15", "duff", Duff, "beer")
+    let soda = burgerFactory("Soda", "$2", "$3", "soda", Soda, "soda") 
     
     const generateMenuItem = (item) => {
         const _itemCard = document.createElement("div")
@@ -43,7 +47,11 @@ const menuContent = (() => {
         _itemCard.appendChild(_itemImage)
         const _itemPrice = document.createElement("div")
         _itemPrice.classList.add(`${item.theid}`+"Price")
-        _itemPrice.textContent = "SANDWICH: " + `${item.price}` + " or MEAL: " + `${item.meal}`
+        if (item.type === "beer"){
+            _itemPrice.textContent = "CAN: " + `${item.price}` + " 12 BEER CASE: " + `${item.meal}`
+            } else if (item.type === "soda"){
+                _itemPrice.textContent = "REGULAR: " + `${item.price}` + " LARGE: " + `${item.meal}`
+            } else  _itemPrice.textContent = "SANDWICH: " + `${item.price}` + " or MEAL: " + `${item.meal}`
         _itemCard.appendChild(_itemPrice)
         
         _menuContent.appendChild(_itemCard)
@@ -55,6 +63,8 @@ const menuContent = (() => {
     //generateMenuItem(ribwich)
     generateMenuItem(motherNature)
     generateMenuItem(sideShow)
+    generateMenuItem(duff)
+    generateMenuItem(soda)
     
     menuDiv.appendChild(_menuContent)
     return menuDiv

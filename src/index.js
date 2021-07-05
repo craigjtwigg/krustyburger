@@ -2,6 +2,7 @@ import './style.css'
 import Logo from "./krustyburgerlogo.png"
 import menuContent from './menu'
 import contactContent from './contact'
+import homeContent from './home'
 
 function component() {
 const container = document.createElement("div")
@@ -22,7 +23,7 @@ nav.innerHTML = "<button class='homeButton'>HOME</button><button class='menuButt
 const content = document.createElement("div")
 content.classList.add("content")
 
-content.textContent = "Test Content"
+content.appendChild(homeContent)
 
 
 
@@ -41,6 +42,12 @@ const contactButton = document.querySelector(".contactButton")
 contactButton.addEventListener("click", () => {
     content.textContent = ""
     content.appendChild(contactContent)
+})
+
+const homeButton = document.querySelector(".homeButton")
+homeButton.addEventListener("click", () => {
+    content.textContent = ""
+    content.appendChild(homeContent)
 })
 
 return container;
