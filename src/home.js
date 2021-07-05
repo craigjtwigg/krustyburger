@@ -13,16 +13,19 @@ const homeContent = (() => {
     welcomeDiv.classList.add("welcomeDiv")
     homeDiv.appendChild(welcomeDiv)
 
+
+    const joint = new Image();
+    joint.src = Joint;
+    joint.classList.add("joint");
+    welcomeDiv.appendChild(joint)
+
     const welcome = document.createElement("p")
     welcome.classList.add("welcome")
     welcome.textContent = "Hey kids! Do you like burgers, fries, soda, BEER!? Come on down and fill your gut at our joint in donwtown Springfield USA!"
     welcomeDiv.appendChild(welcome)
 
 
-    const joint = new Image();
-    joint.src = Joint;
-    joint.classList.add("joint");
-    welcomeDiv.appendChild(joint)
+    
 
     
     const guaranteeDiv = document.createElement("div")
